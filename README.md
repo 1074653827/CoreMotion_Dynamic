@@ -8,7 +8,7 @@ CoreMotion、Dynamic、Collision、Push、碰撞检测
 
     [coreM getDeviceMotionWithBlock:^(double x, double y, double z) {
 
-}];
+    }];
     
 /**
  加速度参数
