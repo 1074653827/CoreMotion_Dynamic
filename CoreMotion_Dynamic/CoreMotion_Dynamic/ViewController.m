@@ -55,12 +55,12 @@
     
     [self.view addGestureRecognizer:tap];
 
-//    
+    __weak ViewController * weakSelf = self;
     [coreM getDeviceMotionWithBlock:^(double x, double y, double z) {
 
         if (fabs(x*100)>1&&fabs(y*100)>1) {
             
-            for (UIImageView* imagev in _images) {
+            for (UIImageView* imagev in weakSelf.images) {
                 
                 [imagev pem_PushBehaviorMode:UIPushBehaviorModeInstantaneous Block:^(UIPushBehavior *push) {
                    

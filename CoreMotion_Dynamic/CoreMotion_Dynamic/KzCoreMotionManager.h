@@ -19,11 +19,17 @@ typedef void(^DeviceMotionBlock)(double x,double y,double z);
 
 
 + (instancetype)sharedInstance;
-
+/**
+ 加速度
+ */
 -(void)getAccelerometerWithBlock:(AccelerometerBlock)block;
-
+/**
+ 磁场
+ */
 -(void)getMagnetometerWithBlock:(MagnetometerBlock)block;
-
+/**
+ 运动
+ */
 -(void)getDeviceMotionWithBlock:(DeviceMotionBlock)block;
 
 @end
